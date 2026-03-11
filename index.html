@@ -4,24 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/x-icon" href="PDS_Dashboard.ico">
-<title>Palo Duro Signals | Market Intelligence for the Texas Panhandle</title>
-<meta name="description" content="Weekly intelligence packets for Panhandle businesses. Bids, permits, competitor moves, and local government signals delivered every Monday.">
+<title>Palo Duro Signals | Pre-Spend Intelligence for B2B Sales</title>
+<meta name="description" content="PDS monitors 106+ public data sources and sends you the signals that matter every Monday — names, dollar amounts, and deadlines — months before your competition knows to look.">
 
 <!-- Open Graph / LinkedIn -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.palodurosignals.com/">
-<meta property="og:title" content="Palo Duro Signals | Texas Panhandle Market Intelligence">
-<meta property="og:description" content="Weekly intelligence for Panhandle B2B operators. Bids, permits, competitor moves, and government signals from 40+ sources. Delivered every Monday before 8am.">
-<meta property="og:image" content="https://www.palodurosignals.com/og-image.png">
+<meta property="og:url" content="https://palodurosignals.ai/">
+<meta property="og:title" content="Palo Duro Signals | Pre-Spend Intelligence for B2B Sales">
+<meta property="og:description" content="PDS monitors 106+ public data sources and sends you the signals that matter every Monday — names, dollar amounts, and deadlines — months before your competition knows to look.">
+<meta property="og:image" content="https://palodurosignals.ai/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Palo Duro Signals">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Palo Duro Signals | Texas Panhandle Market Intelligence">
-<meta name="twitter:description" content="Weekly intelligence for Panhandle B2B operators. Bids, permits, competitor moves, and government signals from 40+ sources. Delivered every Monday before 8am.">
-<meta name="twitter:image" content="https://www.palodurosignals.com/og-image.png">
+<meta name="twitter:title" content="Palo Duro Signals | Pre-Spend Intelligence for B2B Sales">
+<meta name="twitter:description" content="PDS monitors 106+ public data sources and sends you the signals that matter every Monday — names, dollar amounts, and deadlines — months before your competition knows to look.">
+<meta name="twitter:image" content="https://palodurosignals.ai/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -111,7 +111,7 @@ a{color:inherit;text-decoration:none;}
 .hero-inner{position:relative;z-index:2;text-align:center;}
 .hero-hed{font-family:var(--serif);font-size:clamp(38px,6vw,70px);font-weight:400;line-height:1.08;max-width:840px;margin:0 auto 24px;letter-spacing:-.5px;}
 .hero-hed em{color:var(--rust);font-style:italic;}
-.hero-sub{font-size:clamp(15px,1.8vw,18px);color:var(--muted);max-width:500px;margin:0 auto 40px;line-height:1.8;}
+.hero-sub{font-size:clamp(15px,1.8vw,18px);color:var(--muted);max-width:560px;margin:0 auto 40px;line-height:1.8;}
 .hero-ctas{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;}
 .hero-proof{margin-top:52px;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
 .hp-item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--dim);text-transform:uppercase;}
@@ -121,17 +121,34 @@ a{color:inherit;text-decoration:none;}
 @media(max-width:480px){.hero-ctas{flex-direction:column;width:100%;max-width:260px;margin:0 auto;}}
 
 /* ══════════════════════════════════════
-   TICKER
+   PROOF BAR (replaces ticker)
 ══════════════════════════════════════ */
-.ticker{background:var(--rust);overflow:hidden;padding:11px 0;}
-.t-track{display:flex;gap:44px;width:max-content;will-change:transform;}
-.t-item{font-family:var(--mono);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.82);white-space:nowrap;display:flex;align-items:center;gap:14px;}
-.t-item::before{content:'◆';font-size:6px;opacity:.55;}
+.proof-bar{background:var(--bg-2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:28px 0;}
+.proof-items{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.proof-item{text-align:center;padding:0 16px;}
+.pi-src{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);margin-bottom:6px;}
+.pi-what{font-size:13px;color:var(--text);line-height:1.5;margin-bottom:4px;}
+.pi-val{font-family:var(--mono);font-size:11px;color:var(--gold);}
+@media(max-width:640px){.proof-items{grid-template-columns:1fr;gap:20px;}.proof-item{text-align:left;border-bottom:1px solid var(--bdr);padding-bottom:16px;}.proof-item:last-child{border:none;padding:0;}}
+
+/* ══════════════════════════════════════
+   HOW IT WORKS
+══════════════════════════════════════ */
+.how{background:var(--bg-1);padding:var(--sp) 0;}
+.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;position:relative;}
+.how-steps::before{content:'';position:absolute;top:27px;left:16%;right:16%;height:1px;background:linear-gradient(90deg,var(--rust),var(--gold),var(--sage));opacity:.22;pointer-events:none;}
+.how-step{text-align:center;padding:0 28px;position:relative;}
+.hs-n{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--rust);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:var(--serif);font-size:22px;color:var(--rust);background:var(--bg-1);}
+.hs-n.gold{border-color:var(--gold);color:var(--gold);}
+.hs-n.sage{border-color:var(--sage);color:var(--sage);}
+.hs-title{font-size:15px;font-weight:600;margin-bottom:8px;}
+.hs-body{font-size:13px;color:var(--muted);line-height:1.7;max-width:240px;margin:0 auto;}
+@media(max-width:760px){.how-steps{grid-template-columns:1fr;gap:40px;}.how-steps::before{display:none;}}
 
 /* ══════════════════════════════════════
    WHAT YOU GET
 ══════════════════════════════════════ */
-.packet{background:var(--bg-1);padding:var(--sp) 0;}
+.packet{background:var(--bg-3);padding:var(--sp) 0;}
 .pkt-header{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end;padding-bottom:40px;border-bottom:1px solid var(--bdr);margin-bottom:48px;}
 .pkt-header-left{}
 .pkt-header-right{color:var(--muted);font-size:15px;line-height:1.8;}
@@ -168,51 +185,57 @@ a{color:inherit;text-decoration:none;}
 }
 
 /* ══════════════════════════════════════
-   SIGNAL FEED  (filterable)
+   SAMPLE SIGNAL CARD (standalone)
 ══════════════════════════════════════ */
-.feed-sec{background:var(--bg-2);padding:var(--sp) 0;}
-.feed-controls{display:flex;flex-direction:column;gap:12px;margin-bottom:36px;}
-.fc-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
-.fc-label{font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--dim);width:68px;flex-shrink:0;}
-.fb{font-family:var(--mono);font-size:11px;padding:7px 14px;border-radius:20px;border:1px solid var(--bdr-2);background:transparent;color:var(--muted);cursor:pointer;transition:all .18s;white-space:nowrap;}
-.fb:hover{border-color:var(--rust);color:var(--text);}
-.fb.on{background:var(--rust);border-color:var(--rust);color:#fff;}
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(295px,1fr));gap:14px;}
-.sig-card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r-lg);padding:22px;transition:all .2s;position:relative;}
-.sig-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;border-radius:var(--r-lg) var(--r-lg) 0 0;background:var(--rust);opacity:0;transition:opacity .2s;}
-.sig-card:hover{border-color:var(--bdr-2);background:var(--card-h);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.35);}
-.sig-card:hover::after{opacity:1;}
-.sig-card.hide{display:none;}
-.sc-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.sc-role{font-family:var(--mono);font-size:8px;letter-spacing:1px;color:var(--dim);padding:3px 7px;border:1px solid var(--bdr);border-radius:3px;text-transform:uppercase;}
-.sc-what{font-size:14px;font-weight:500;color:var(--text);line-height:1.5;margin-bottom:8px;}
-.sc-why{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:10px;}
-.sc-next{font-size:12px;color:var(--rust);font-weight:600;display:flex;gap:6px;}
-.sc-next-lbl{color:var(--dim);font-weight:400;}
-.feed-empty{grid-column:1/-1;text-align:center;padding:60px;color:var(--dim);font-size:14px;}
+.signal-showcase{background:var(--bg-2);padding:var(--sp) 0;}
+.showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:48px;}
+.showcase-card{background:#0F1D2F;border:1px solid rgba(184,134,11,.25);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 16px 64px rgba(0,0,0,.5);}
+.showcase-card-head{background:linear-gradient(135deg,#0F1D2F,#1E3A5F);padding:18px 22px;border-bottom:1px solid rgba(184,134,11,.2);}
+.showcase-tier{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--rust);background:rgba(192,90,46,.12);padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:8px;}
+.showcase-card-title{font-family:var(--serif);font-size:18px;color:#F0EDE7;}
+.showcase-card-src{font-family:var(--mono);font-size:9px;color:rgba(240,237,231,.4);margin-top:4px;}
+.showcase-card-body{padding:22px;}
+.showcase-card-body p{font-size:14px;color:rgba(240,237,231,.85);line-height:1.7;margin-bottom:16px;}
+.showcase-card-body .sc-label{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.showcase-card-body .sc-why{font-size:13px;color:rgba(240,237,231,.65);line-height:1.7;margin-bottom:16px;}
+.showcase-card-action{background:rgba(10,123,62,.08);border:1px solid rgba(10,123,62,.2);border-radius:var(--r);padding:14px 16px;margin-top:4px;}
+.showcase-card-action .sc-label{color:#0A7B3E;}
+.showcase-card-action p{font-size:13px;color:rgba(240,237,231,.8);line-height:1.6;margin:0;}
+.showcase-note{font-size:15px;color:var(--muted);line-height:1.8;margin-top:36px;}
+@media(max-width:800px){.showcase-grid{grid-template-columns:1fr;gap:36px;}}
 
 /* ══════════════════════════════════════
-   HOW IT WORKS
+   WHO IT'S FOR
 ══════════════════════════════════════ */
-.how{background:var(--bg-3);padding:var(--sp) 0;}
-.how-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;position:relative;}
-.how-steps::before{content:'';position:absolute;top:27px;left:16%;right:16%;height:1px;background:linear-gradient(90deg,var(--rust),var(--gold),var(--sage));opacity:.22;pointer-events:none;}
-.how-step{text-align:center;padding:0 28px;position:relative;}
-.hs-n{width:54px;height:54px;border-radius:50%;border:1.5px solid var(--rust);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;font-family:var(--serif);font-size:22px;color:var(--rust);background:var(--bg-3);}
-.hs-n.gold{border-color:var(--gold);color:var(--gold);}
-.hs-n.sage{border-color:var(--sage);color:var(--sage);}
-.hs-title{font-size:15px;font-weight:600;margin-bottom:8px;}
-.hs-body{font-size:13px;color:var(--muted);line-height:1.7;max-width:220px;margin:0 auto;}
-.how-w1{background:var(--bg-2);border:1px solid var(--bdr-2);border-radius:var(--r-lg);padding:36px;margin-top:56px;display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start;}
-.w1-label{font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.w1-hed{font-family:var(--serif);font-size:24px;font-weight:400;line-height:1.25;}
-.w1-items{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.w1-item{font-size:13px;color:var(--muted);line-height:1.65;display:flex;gap:10px;}
-.w1-item::before{content:'→';color:var(--rust);flex-shrink:0;}
-@media(max-width:760px){.how-steps{grid-template-columns:1fr;gap:40px;}.how-steps::before{display:none;}.how-w1{grid-template-columns:1fr;gap:24px;}.w1-items{grid-template-columns:1fr;}}
+.who{background:var(--bg-1);padding:var(--sp) 0;}
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
+.who-card{background:var(--card);border:1px solid var(--bdr);border-radius:var(--r-lg);padding:32px;transition:all .2s;}
+.who-card:hover{border-color:var(--bdr-2);}
+.wc-ico{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--bdr-2);display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-family:var(--serif);font-size:20px;}
+.wc-title{font-size:16px;font-weight:600;margin-bottom:10px;}
+.wc-body{font-size:13px;color:var(--muted);line-height:1.75;}
+@media(max-width:760px){.who-grid{grid-template-columns:1fr;}}
 
 /* ══════════════════════════════════════
-   ABOUT  (replaces founder section)
+   MARKETS
+══════════════════════════════════════ */
+.markets{background:var(--bg-3);padding:var(--sp) 0;}
+.markets-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;}
+.market-card{background:var(--card);border:1px solid var(--bdr-2);border-radius:var(--r-lg);padding:36px;transition:all .2s;}
+.market-card:hover{border-color:var(--bdr-3);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.35);}
+.mc-status{font-family:var(--mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 10px;border-radius:3px;display:inline-block;margin-bottom:14px;}
+.mc-live{background:rgba(88,120,86,.15);color:var(--sage);}
+.mc-anchor{background:rgba(192,90,46,.15);color:var(--rust);}
+.mc-city{font-family:var(--serif);font-size:26px;margin-bottom:4px;}
+.mc-label{font-size:13px;color:var(--gold);font-weight:600;margin-bottom:12px;}
+.mc-body{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px;}
+.mc-stat{font-family:var(--mono);font-size:11px;color:var(--dim);}
+.markets-cta{text-align:center;margin-top:40px;}
+.markets-cta p{font-size:15px;color:var(--muted);line-height:1.8;max-width:520px;margin:0 auto 24px;}
+@media(max-width:640px){.markets-grid{grid-template-columns:1fr;}}
+
+/* ══════════════════════════════════════
+   ABOUT
 ══════════════════════════════════════ */
 .about{background:var(--bg);padding:var(--sp) 0;position:relative;}
 .about::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rust),var(--gold),var(--lav),var(--sage));opacity:.45;}
@@ -237,6 +260,35 @@ a{color:inherit;text-decoration:none;}
 @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:44px;}}
 
 /* ══════════════════════════════════════
+   PRICING
+══════════════════════════════════════ */
+.pricing{background:var(--bg-2);padding:var(--sp) 0;}
+.pricing-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:48px;max-width:1020px;margin-left:auto;margin-right:auto;}
+.price-card{background:var(--card);border:1px solid var(--bdr-2);border-radius:var(--r-lg);padding:40px 32px;text-align:center;}
+.price-card.featured{border-color:var(--rust);background:var(--bg-4);position:relative;}
+.price-card.featured::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--rust),var(--gold));border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.pc-label{font-family:var(--mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.pc-price{font-family:var(--serif);font-size:48px;color:var(--text);line-height:1;}
+.pc-price span{font-size:18px;color:var(--muted);font-family:var(--sans);font-weight:400;}
+.pc-period{font-size:13px;color:var(--dim);margin-top:6px;margin-bottom:20px;}
+.pc-save{font-family:var(--mono);font-size:11px;color:var(--sage);background:rgba(88,120,86,.12);padding:5px 12px;border-radius:20px;display:inline-block;margin-bottom:20px;}
+.pc-features{list-style:none;text-align:left;margin-bottom:28px;}
+.pc-features li{font-size:13px;color:var(--muted);line-height:1.65;padding:6px 0;border-bottom:1px solid var(--bdr);display:flex;gap:10px;}
+.pc-features li::before{content:'→';color:var(--rust);flex-shrink:0;}
+.pc-features li:last-child{border:none;}
+.pc-note{font-size:12px;color:var(--dim);margin-top:8px;line-height:1.6;}
+.founding-card{background:var(--card);border:2px solid var(--gold);border-radius:var(--r-lg);padding:40px;margin-top:24px;max-width:1020px;margin-left:auto;margin-right:auto;text-align:center;position:relative;}
+.founding-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);border-radius:var(--r-lg) var(--r-lg) 0 0;}
+.fc-hed{font-family:var(--serif);font-size:24px;color:var(--gold);margin-bottom:12px;}
+.fc-body{font-size:14px;color:var(--muted);line-height:1.8;max-width:500px;margin:0 auto 20px;}
+.fc-spots{font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--rust);text-transform:uppercase;}
+@media(max-width:840px){.pricing-cards{grid-template-columns:1fr;}}
+.price-card.custom{border-color:var(--lav);}
+.price-card.custom .pc-label{color:var(--lav);}
+.pc-custom-price{font-family:var(--serif);font-size:32px;color:var(--text);line-height:1;margin-bottom:4px;}
+.pc-custom-sub{font-size:13px;color:var(--dim);margin-top:6px;margin-bottom:20px;}
+
+/* ══════════════════════════════════════
    CTA
 ══════════════════════════════════════ */
 .cta-sec{background:var(--bg-1);padding:var(--sp) 0;position:relative;overflow:hidden;}
@@ -252,6 +304,11 @@ a{color:inherit;text-decoration:none;}
 .cf-f select option{background:var(--bg-3);}
 .cf-f{margin-bottom:12px;}
 .cf-micro{font-family:var(--mono);font-size:10px;color:var(--dim);text-align:center;margin-top:14px;line-height:1.7;}
+.cf-success{max-width:460px;margin:44px auto 0;background:var(--bg-2);border:1px solid var(--sage);border-radius:var(--r-lg);padding:48px 36px;text-align:center;}
+.cf-success-ico{width:56px;height:56px;border-radius:50%;background:rgba(88,120,86,.15);border:1.5px solid var(--sage);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:24px;color:var(--sage);}
+.cf-success-hed{font-family:var(--serif);font-size:24px;margin-bottom:10px;}
+.cf-success-body{font-size:15px;color:var(--muted);line-height:1.75;max-width:360px;margin:0 auto;}
+.cf-success-note{font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:20px;letter-spacing:1px;text-transform:uppercase;}
 
 /* ══════════════════════════════════════
    FOOTER
@@ -259,6 +316,7 @@ a{color:inherit;text-decoration:none;}
 .footer{background:var(--bg);border-top:1px solid var(--bdr);padding:44px 0 32px;}
 .foot-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:32px;align-items:start;}
 .foot-brand{font-family:var(--serif);font-size:15px;margin-bottom:6px;}
+.foot-tag{font-family:var(--mono);font-size:10px;letter-spacing:1.5px;color:var(--rust);text-transform:uppercase;margin-bottom:6px;}
 .foot-loc{font-size:12px;color:var(--dim);}
 .foot-links{display:flex;flex-direction:column;gap:10px;align-items:center;}
 .foot-lnk{font-size:13px;color:var(--dim);transition:color .2s;}
@@ -270,7 +328,7 @@ a{color:inherit;text-decoration:none;}
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAV (slimmed) -->
 <nav class="nav">
   <div class="nav-in wrap">
     <a href="#" class="nav-brand">
@@ -283,80 +341,108 @@ a{color:inherit;text-decoration:none;}
     </a>
     <div class="nav-r">
       <div class="nav-links">
-        <a href="#feed" class="nav-lnk">Signals</a>
-        <a href="#how" class="nav-lnk">How It Works</a>
+        <a href="#signal" class="nav-lnk">Sample Report</a>
+        <a href="#markets" class="nav-lnk">Markets</a>
+        <a href="#pricing" class="nav-lnk">Pricing</a>
         <a href="#about" class="nav-lnk">About</a>
       </div>
-      <a href="mailto:info@palodurosignals.com?subject=Quick Intro Request" class="btn btn-ghost nav-ghost" style="font-size:13px;padding:9px 18px;">Book a quick intro</a>
-      <a href="#contact" class="btn btn-rust" style="font-size:13px;padding:9px 20px;">Request a sample packet</a>
+      <a href="#contact" class="btn btn-rust" style="font-size:13px;padding:9px 20px;">See My First Report</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══════════════════════════════════
+     SECTION 1: HERO
+═══════════════════════════════════ -->
 <section class="hero">
   <canvas id="heroC"></canvas>
   <div class="hero-inner wrap">
-    <span class="eyebrow rv" style="display:block;text-align:center;">Texas Panhandle Market Intelligence</span>
+    <span class="eyebrow rv" style="display:block;text-align:center;">Pre-Spend Intelligence</span>
     <h1 class="hero-hed serif rv" style="transition-delay:.08s">
-      What changed in your market<br><em>this week?</em>
+      The best deals rarely start with an announcement. They start with a filing, a permit, or a vote.
     </h1>
     <p class="hero-sub rv" style="transition-delay:.16s">
-      Palo Duro Signals delivers a weekly intelligence packet sourced from 40 plus public records databases. Bids, permits, new competitors, hiring signals, and government decisions. Before your competitors see them.
+      Your next opportunity is already sitting in a public record somewhere. PDS finds it, scores it, and sends you the signals that matter every Monday with names, dollar amounts, and deadlines.
     </p>
     <div class="hero-ctas rv" style="transition-delay:.24s">
-      <a href="#contact" class="btn btn-rust">Request a sample packet</a>
-      <a href="mailto:info@palodurosignals.com?subject=Quick Intro Request" class="btn btn-ghost">Book a quick intro</a>
+      <a href="#contact" class="btn btn-rust">See My First Report</a>
+      <a href="#how" class="btn btn-ghost">How It Works</a>
     </div>
     <div class="hero-proof rv" style="transition-delay:.36s">
-      <span class="hp-item"><span class="hp-dot"></span>40+ data sources</span>
-      <span class="hp-item"><span class="hp-dot hp-dot-gold"></span>9 industries covered</span>
-      <span class="hp-item"><span class="hp-dot hp-dot-sage"></span>Delivered every Monday</span>
-      <span class="hp-item"><span class="hp-dot"></span>Amarillo, Texas</span>
+      <span class="hp-item"><span class="hp-dot"></span>First report free</span>
+      <span class="hp-item"><span class="hp-dot hp-dot-gold"></span>106+ sources monitored daily</span>
+      <span class="hp-item"><span class="hp-dot hp-dot-sage"></span>Signals surfaced months before the market reacts</span>
+      <span class="hp-item"><span class="hp-dot"></span>No contract required</span>
     </div>
   </div>
 </section>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="t-track">
-    <span class="t-item">New Competitor Permits</span>
-    <span class="t-item">ESBD Bid Postings</span>
-    <span class="t-item">TWC Workforce Filings</span>
-    <span class="t-item">Zoning Changes</span>
-    <span class="t-item">Franchise Tax Filings</span>
-    <span class="t-item">City Council Decisions</span>
-    <span class="t-item">TABC License Applications</span>
-    <span class="t-item">TCEQ Environmental Permits</span>
-    <span class="t-item">State Contract Awards</span>
-    <span class="t-item">Deed Transfers</span>
-    <span class="t-item">Secretary of State Filings</span>
-    <span class="t-item">Google Business Signals</span>
-    <span class="t-item">New Competitor Permits</span>
-    <span class="t-item">ESBD Bid Postings</span>
-    <span class="t-item">TWC Workforce Filings</span>
-    <span class="t-item">Zoning Changes</span>
-    <span class="t-item">Franchise Tax Filings</span>
-    <span class="t-item">City Council Decisions</span>
-    <span class="t-item">TABC License Applications</span>
-    <span class="t-item">TCEQ Environmental Permits</span>
-    <span class="t-item">State Contract Awards</span>
-    <span class="t-item">Deed Transfers</span>
-    <span class="t-item">Secretary of State Filings</span>
-    <span class="t-item">Google Business Signals</span>
+<!-- ═══════════════════════════════════
+     SECTION 2: PROOF BAR (static, replaces ticker)
+═══════════════════════════════════ -->
+<div class="proof-bar">
+  <div class="wrap">
+    <div class="proof-items rv">
+      <div class="proof-item">
+        <div class="pi-src">Atlanta Building Permits</div>
+        <div class="pi-what">Northside Hospital &mdash; 45,000 sq ft medical office construction</div>
+        <div class="pi-val">$12.4M &middot; Filed March 6, 2026</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-src">RRC Pipeline Permits + ERCOT</div>
+        <div class="pi-what">42-mile pipeline segment &mdash; 180MW solar on same corridor</div>
+        <div class="pi-val">Multi-category &middot; Construction Q3 2026</div>
+      </div>
+      <div class="proof-item">
+        <div class="pi-src">Amarillo EDC Board Minutes</div>
+        <div class="pi-what">Unnamed logistics company &mdash; 200K sq ft warehouse, 150 jobs</div>
+        <div class="pi-val">Chapter 380 incentive approved</div>
+      </div>
+    </div>
   </div>
 </div>
 
-<!-- WHAT YOU GET -->
+<!-- ═══════════════════════════════════
+     SECTION 3: HOW IT WORKS (3 steps)
+═══════════════════════════════════ -->
+<section class="how" id="how">
+  <div class="wrap">
+    <span class="eyebrow rv">How It Works</span>
+    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;transition-delay:.08s">Tell us your market. Get your first report free.</h2>
+    <div class="how-steps">
+      <div class="how-step rv" style="transition-delay:.1s">
+        <div class="hs-n">1</div>
+        <div class="hs-title">Tell us your market</div>
+        <p class="hs-body">Your name, company, industry, and the city you cover. We build your first report and send it at no cost.</p>
+      </div>
+      <div class="how-step rv" style="transition-delay:.2s">
+        <div class="hs-n gold">2</div>
+        <div class="hs-title">We scan and score</div>
+        <p class="hs-body">106+ public sources &mdash; permits, filings, board minutes, procurement portals &mdash; filtered to your territory and ranked by signal strength.</p>
+      </div>
+      <div class="how-step rv" style="transition-delay:.3s">
+        <div class="hs-n sage">3</div>
+        <div class="hs-title">Your report arrives Monday</div>
+        <p class="hs-body">Names, dollar amounts, and deadlines in your inbox before 8am. If the first one isn't useful, walk away &mdash; no charge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule-accent"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 4: WHAT'S IN THE REPORT
+═══════════════════════════════════ -->
 <section class="packet" id="packet">
   <div class="wrap">
     <div class="pkt-header rv">
       <div class="pkt-header-left">
-        <span class="eyebrow">What You Receive</span>
-        <h2 class="serif" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;">A complete intelligence packet.<br>Every Monday morning.</h2>
+        <span class="eyebrow">What You Get</span>
+        <h2 class="serif" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;">One report. Every Monday.<br>Before you finish your coffee.</h2>
       </div>
       <div class="pkt-header-right">
-        Not a data dump. A curated set of signals filtered to your industry and territory. Each one sourced, verified, and delivered with a suggested next action.
+        Not a dashboard. Not a noisy feed. One weekly report for your territory with the accounts that matter, what they are likely to spend, and when to act.
       </div>
     </div>
     <div class="pkt-grid">
@@ -366,8 +452,8 @@ a{color:inherit;text-decoration:none;}
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#C05A2E" stroke-width="1.5" stroke-linecap="round"><path d="M2 13 L5 8 L8 10.5 L11 5.5 L14 8.5 L16 4.5"/><circle cx="11" cy="5.5" r="1.5" fill="#C05A2E" stroke="none"/></svg>
           </div>
           <div>
-            <div class="pf-title">15 to 25 actionable signals per packet</div>
-            <p class="pf-body">Every signal includes the raw data, a plain English interpretation, and a suggested first move. No noise. No filler.</p>
+            <div class="pf-title">15–25 signals per report</div>
+            <p class="pf-body">Each one ranked by confidence. Every signal includes a next step.</p>
           </div>
         </div>
         <div class="pkt-feat rv" style="transition-delay:.18s">
@@ -375,8 +461,8 @@ a{color:inherit;text-decoration:none;}
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#C8922A" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="2" width="12" height="14" rx="2"/><path d="M6 6h6M6 9h5M6 12h3"/></svg>
           </div>
           <div>
-            <div class="pf-title">Source cited on every signal</div>
-            <p class="pf-body">County permits, ESBD board, Secretary of State, council minutes. Every signal is verifiable. You know exactly where it came from.</p>
+            <div class="pf-title">Patterns across sources</div>
+            <p class="pf-body">When a permit, a board vote, and a power application all point at the same company &mdash; we connect the dots so you don't have to.</p>
           </div>
         </div>
         <div class="pkt-feat rv" style="transition-delay:.26s">
@@ -384,8 +470,8 @@ a{color:inherit;text-decoration:none;}
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#587856" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="6.5"/><path d="M6 9h6M9 6v6"/><circle cx="9" cy="9" r="1.5" fill="#587856" stroke="none"/></svg>
           </div>
           <div>
-            <div class="pf-title">Cross referenced across sources</div>
-            <p class="pf-body">A filing plus a permit plus a new Google listing in the same week is a signal. We connect those dots before you see it.</p>
+            <div class="pf-title">Names, numbers, and deadlines</div>
+            <p class="pf-body">The company, the person to call, how much they're likely to spend, and the window to act.</p>
           </div>
         </div>
         <div class="pkt-feat rv" style="transition-delay:.34s">
@@ -393,187 +479,87 @@ a{color:inherit;text-decoration:none;}
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#C05A2E" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="9" r="6.5"/><path d="M9 5.5v3.5l2.5 1.5"/></svg>
           </div>
           <div>
-            <div class="pf-title">In your inbox before 8am Monday</div>
-            <p class="pf-body">Built around signals from the prior 7 days. Current, not cached. Ready before your week starts.</p>
+            <div class="pf-title">Tuned to your market</div>
+            <p class="pf-body">Filtered to your territory and the types of deals you actually close.</p>
           </div>
         </div>
       </div>
 
-      <!-- SAMPLE PACKET -->
+      <!-- SAMPLE DOSSIER PREVIEW -->
       <div class="rv" style="transition-delay:.2s">
         <div class="sample-wrap">
           <div class="sw-bar">
-            <span class="sw-brand">Palo Duro Signals</span>
-            <span class="sw-date mono">Week of March 10, 2026 · Amarillo Region</span>
+            <span class="sw-brand">Palo Duro Signals &middot; Intelligence Dossier</span>
+            <span class="sw-date mono">Week of March 10, 2026</span>
+          </div>
+          <div style="background:rgba(192,90,46,.05);padding:10px 18px;border-bottom:1px solid var(--bdr);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+            <span class="mono" style="font-size:9px;color:var(--dim);">Sources: <strong style="color:var(--text);font-size:11px;">106</strong></span>
+            <span class="mono" style="font-size:9px;color:var(--dim);">Signals: <strong style="color:var(--text);font-size:11px;">23</strong></span>
+            <span class="mono" style="font-size:9px;color:var(--gold);">Patterns: <strong style="color:var(--gold);font-size:11px;">4</strong></span>
+            <span class="mono" style="font-size:9px;color:var(--sage);">Actions: <strong style="color:var(--sage);font-size:11px;">7</strong></span>
           </div>
           <div class="sw-body">
             <div class="sw-sig">
-              <span class="sig-badge b-hot">High Priority</span>
-              <span class="sig-src mono">Comptroller + County Permits + Google Places</span>
-              <p class="sig-what">Austin contractor filed franchise tax in Canyon. A 40K sqft commercial permit appeared three days later. Google Business listing went live same week with zero reviews and no website.</p>
-              <span class="sig-act">→ New market entrant staging a build. Local sub window is open now.</span>
+              <span class="sig-badge b-hot">Crown Jewel</span>
+              <span class="sig-src mono">Atlanta Building Permits + Georgia Power Interconnection</span>
+              <p class="sig-what">Northside Hospital filed construction permit for 45,000 sq ft medical office building. Georgia Power interconnection application filed same week.</p>
+              <span class="sig-act">→ Contact VP Marketing before May 2026. Est. value: $75K–$150K</span>
             </div>
             <div class="sw-sig">
-              <span class="sig-badge b-bid">Open Bid</span>
-              <span class="sig-src mono">ESBD Bid Board + Council Minutes</span>
-              <p class="sig-what">Canyon ISD HVAC replacement RFP, est. $380K. Posted 48 hours after council approval. Two registered bidders, both out of area. Deadline in 14 days.</p>
-              <span class="sig-act">→ Low competition window. Register before outside firms price in.</span>
+              <span class="sig-badge b-gov">High Value</span>
+              <span class="sig-src mono">RRC Pipeline Permits + ERCOT Queue</span>
+              <p class="sig-what">T-4 pipeline permit filed for 42-mile segment. ERCOT queue shows 180MW solar facility on the same corridor.</p>
+              <span class="sig-act">→ 8+ service categories. Construction window Q3 2026.</span>
             </div>
             <div class="sw-sig">
-              <span class="sig-badge b-comp">Competitor Move</span>
-              <span class="sig-src mono">Google Places + Randall County Filings</span>
-              <p class="sig-what">Competitor added three new service categories to their Google listing the same week they appeared as subcontractor on a Randall County project filing.</p>
-              <span class="sig-act">→ Expanding scope into your territory. Review active accounts for overlap.</span>
-            </div>
-            <div class="sw-sig">
-              <span class="sig-badge b-gov">Government</span>
-              <span class="sig-src mono">Amarillo City Council Agenda</span>
-              <p class="sig-what">Downtown Corridor Revitalization added to next month's council agenda. State matching funds of $4.8M already allocated per budget attachment.</p>
-              <span class="sig-act">→ RFPs follow the vote. Position before the announcement cycle starts.</span>
+              <span class="sig-badge b-bid">Standard</span>
+              <span class="sig-src mono">Amarillo EDC Board Minutes</span>
+              <p class="sig-what">Unnamed logistics company approved for Chapter 380 incentive. 200,000 sq ft warehouse, 150 FTE.</p>
+              <span class="sig-act">→ Monitor next EDC meeting for identity reveal.</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<div class="rule-accent"></div>
-
-<!-- SIGNAL FEED -->
-<section class="feed-sec" id="feed">
-  <div class="wrap">
-    <span class="eyebrow eyebrow-gold rv">Live Signal Feed</span>
-    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;transition-delay:.08s">Browse example signals by category and role</h2>
-    <p class="rv" style="font-size:15px;color:var(--muted);max-width:500px;margin-top:14px;line-height:1.75;margin-bottom:36px;transition-delay:.14s">Filter by what matters to your business. Every card shows what happened, why it matters, and what to do next.</p>
-
-    <div class="feed-controls rv" style="transition-delay:.2s">
-      <div class="fc-row">
-        <span class="fc-label">Category</span>
-        <div id="catF" style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="fb on" data-cat="all">All</button>
-          <button class="fb" data-cat="bid">Bids</button>
-          <button class="fb" data-cat="permit">Permits</button>
-          <button class="fb" data-cat="hiring">Hiring</button>
-          <button class="fb" data-cat="expansion">Expansions</button>
-          <button class="fb" data-cat="compliance">Compliance</button>
-          <button class="fb" data-cat="competitor">Competitor</button>
-          <button class="fb" data-cat="gov">Government</button>
-        </div>
-      </div>
-      <div class="fc-row">
-        <span class="fc-label">Role</span>
-        <div id="buyerF" style="display:flex;gap:6px;flex-wrap:wrap;">
-          <button class="fb on" data-buyer="all">All</button>
-          <button class="fb" data-buyer="owner">Owner</button>
-          <button class="fb" data-buyer="sales">Sales Leader</button>
-          <button class="fb" data-buyer="ops">Ops Leader</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="cards" id="sigGrid">
-      <div class="sig-card rv" data-cat="bid" data-buyer="owner sales" style="transition-delay:.05s">
-        <div class="sc-top"><span class="sig-badge b-bid" style="margin:0;">Bid</span><span class="sc-role">Owner · Sales</span></div>
-        <p class="sc-what">Amarillo ISD posted a $620K facilities management RFP. Deadline is 21 days out. One vendor attended the pre bid walkthrough.</p>
-        <p class="sc-why">Single walkthrough attendance signals low competition. Government contracts at this size rarely get more than three responsive bids locally.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Register on ESBD, request the spec package, and reach the facilities director before the deadline tightens.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="permit" data-buyer="sales ops" style="transition-delay:.1s">
-        <div class="sc-top"><span class="sig-badge b-hot" style="margin:0;">Permit</span><span class="sc-role">Sales · Ops</span></div>
-        <p class="sc-what">A 25K sqft industrial permit filed on Western Ave with an Xcel Energy industrial service connection request on the same parcel the same week.</p>
-        <p class="sc-why">Industrial service upgrades signal heavy equipment or manufacturing intent. No GC on record yet. Subcontractor and supplier windows are open.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Cross reference the permit owner entity with Secretary of State records to identify who is behind the project.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="expansion" data-buyer="owner sales" style="transition-delay:.15s">
-        <div class="sc-top"><span class="sig-badge b-comp" style="margin:0;">Expansion</span><span class="sc-role">Owner · Sales</span></div>
-        <p class="sc-what">Austin contractor registered franchise tax in Canyon, followed by a 40K sqft commercial permit within 10 days. Google listing appeared with zero reviews.</p>
-        <p class="sc-why">This pattern reliably signals a market entrant staging for construction. They will need local subs and suppliers before groundbreaking.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Pull the registered agent from the Secretary of State filing and make contact before locals realize the project exists.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="hiring" data-buyer="owner sales ops" style="transition-delay:.2s">
-        <div class="sc-top"><span class="sig-badge b-bid" style="margin:0;">Hiring</span><span class="sc-role">All Roles</span></div>
-        <p class="sc-what">Regional logistics company posted 14 driver positions in Randall County while simultaneously registering 14 commercial vehicles with TxDMV.</p>
-        <p class="sc-why">Coordinated fleet registration and driver hiring is an expansion signal, not attrition backfill. This company is adding a route or territory.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Identify whether they will need fuel, maintenance, insurance, or warehouse capacity as the operation scales.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="competitor" data-buyer="owner sales" style="transition-delay:.25s">
-        <div class="sc-top"><span class="sig-badge b-comp" style="margin:0;">Competitor Move</span><span class="sc-role">Owner · Sales</span></div>
-        <p class="sc-what">Competitor added three new service categories to their Google Business profile the same week they appeared as subcontractor on a Randall County filing.</p>
-        <p class="sc-why">This pairing confirms the expansion is operational, not aspirational. They are already working a category you may share.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Review active pipeline for accounts that overlap with the project category. Prioritize those contacts this week.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="gov" data-buyer="owner sales ops" style="transition-delay:.3s">
-        <div class="sc-top"><span class="sig-badge b-gov" style="margin:0;">Government</span><span class="sc-role">All Roles</span></div>
-        <p class="sc-what">City council added Downtown Corridor Revitalization to next month's agenda. State matching funds of $4.8M already approved per the budget attachment.</p>
-        <p class="sc-why">Projects with pre approved funding move fast. RFPs will post within 60 days of the vote. First movers set baseline pricing.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Register with city procurement now and contact the project manager listed in the agenda attachment before the vote.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="compliance" data-buyer="owner ops" style="transition-delay:.35s">
-        <div class="sc-top"><span class="sig-badge b-hot" style="margin:0;">Compliance</span><span class="sc-role">Owner · Ops</span></div>
-        <p class="sc-what">Competitor received a TCEQ notice of violation on their primary operating facility. Filing is public. No press coverage yet.</p>
-        <p class="sc-why">Compliance issues create procurement hesitation for their clients. Regulated industry buyers will quietly evaluate alternatives while the violation is pending.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Identify which of your prospects have this company in their vendor set. This window is short.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="permit" data-buyer="sales ops" style="transition-delay:.4s">
-        <div class="sc-top"><span class="sig-badge b-hot" style="margin:0;">Pattern</span><span class="sc-role">Sales · Ops</span></div>
-        <p class="sc-what">Three commercial permits filed on the same S. Coulter corridor over 60 days. Mix of retail and light industrial. No single filing made news.</p>
-        <p class="sc-why">Corridor development clusters signal incoming tenant demand. New businesses moving into a corridor need services they have not sourced yet.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Map which of your categories fit the incoming tenant mix and prepare outreach for week one of their operations.</div>
-      </div>
-
-      <div class="sig-card rv" data-cat="expansion" data-buyer="owner sales" style="transition-delay:.45s">
-        <div class="sc-top"><span class="sig-badge b-gov" style="margin:0;">New Entry</span><span class="sc-role">Owner · Sales</span></div>
-        <p class="sc-what">Lubbock electrical contractor filed franchise tax in Potter County last week. No local office, no reviews, no web presence yet.</p>
-        <p class="sc-why">Out of area contractors filing local tax typically stage to bid on a specific project. They move fast and often win before locals know they are competing.</p>
-        <div class="sc-next"><span class="sc-next-lbl">Next action:</span>Track their ESBD activity over the next 30 days. If they register on the bid board, identify the project and decide whether to compete.</div>
-      </div>
-    </div>
-    <div id="feedEmpty" class="feed-empty" style="display:none;">No signals match this filter combination.</div>
   </div>
 </section>
 
 <div class="rule-thin-accent"></div>
 
-<!-- HOW IT WORKS -->
-<section class="how" id="how">
+<!-- ═══════════════════════════════════
+     SECTION 5: SAMPLE SIGNAL CARD
+═══════════════════════════════════ -->
+<section class="signal-showcase" id="signal">
   <div class="wrap">
-    <span class="eyebrow rv">Process</span>
-    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;transition-delay:.08s">From signup to intelligence in your inbox</h2>
-    <div class="how-steps">
-      <div class="how-step rv" style="transition-delay:.1s">
-        <div class="hs-n">1</div>
-        <div class="hs-title">Tell us your market</div>
-        <p class="hs-body">Your industry, territory, and the competitors or account types you track most closely.</p>
+    <span class="eyebrow eyebrow-gold rv">Sample Signal</span>
+    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;transition-delay:.08s">See what 1 real signal looks like.</h2>
+
+    <div class="showcase-grid">
+      <div class="rv" style="transition-delay:.2s">
+        <div class="showcase-card">
+          <div class="showcase-card-head">
+            <span class="showcase-tier">High Conviction</span>
+            <div class="showcase-card-title">Northside Hospital &mdash; Medical Office Expansion</div>
+            <div class="showcase-card-src">Atlanta Building Permits &middot; Filed March 6, 2026</div>
+          </div>
+          <div class="showcase-card-body">
+            <div class="sc-label">Signal</div>
+            <p>45,000 sq ft medical office construction permit filed, Peachtree Dunwoody Rd NE. Permit value: $12.4M.</p>
+            <div class="sc-label">Why It Matters</div>
+            <p class="sc-why">New facility means new patients, new marketing spend, and construction subcontractor demand within 90 days of permit.</p>
+            <div class="showcase-card-action">
+              <div class="sc-label">Recommended Move</div>
+              <p>Contact VP Marketing before May 2026. Est. opportunity: $75K&ndash;$150K.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="how-step rv" style="transition-delay:.2s">
-        <div class="hs-n gold">2</div>
-        <div class="hs-title">Sources run weekly</div>
-        <p class="hs-body">40 plus data sources are checked, cross referenced, and filtered against your profile every week without exception.</p>
-      </div>
-      <div class="how-step rv" style="transition-delay:.3s">
-        <div class="hs-n sage">3</div>
-        <div class="hs-title">Monday delivery</div>
-        <p class="hs-body">Your packet arrives before 8am. Read it over coffee. Act on what is relevant. Ignore the rest.</p>
-      </div>
-    </div>
-    <div class="how-w1 rv" style="transition-delay:.38s">
-      <div>
-        <div class="w1-label">Week One</div>
-        <h3 class="w1-hed serif">What happens when you sign up</h3>
-      </div>
-      <div class="w1-items">
-        <div class="w1-item">Fill out a short intake form covering your industry, territory, and priority signal types.</div>
-        <div class="w1-item">We send a sample packet within 48 hours so you can evaluate quality before committing.</div>
-        <div class="w1-item">If you proceed, your first live packet runs the following Monday on the standard schedule.</div>
-        <div class="w1-item">Adjust signal categories, add competitors, or expand territory at any time with a short email.</div>
+      <div class="rv" style="transition-delay:.3s">
+        <p class="showcase-note">This signal was already public. PDS connected it, ranked it, and turned it into an action you can take this week.</p>
+        <p class="showcase-note" style="margin-top:20px;">Every signal is specific, sourced, and ready to act on.</p>
+        <div style="margin-top:32px;">
+          <a href="#contact" class="btn btn-rust">See a Sample for My Market</a>
+        </div>
       </div>
     </div>
   </div>
@@ -581,77 +567,221 @@ a{color:inherit;text-decoration:none;}
 
 <div class="rule-accent"></div>
 
-<!-- ABOUT -->
+<!-- ═══════════════════════════════════
+     SECTION 6: WHO IT'S FOR
+═══════════════════════════════════ -->
+<section class="who" id="who">
+  <div class="wrap">
+    <span class="eyebrow rv">Who This Is For</span>
+    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;transition-delay:.08s">If you sell in a territory, this is for you.</h2>
+    <p class="rv" style="font-size:14px;color:var(--dim);margin-top:10px;transition-delay:.12s">Built for owner-led service businesses, territory sales reps, and firms that win local and regional contracts.</p>
+    <div class="who-grid">
+      <div class="who-card rv" style="transition-delay:.14s">
+        <div class="wc-ico" style="color:var(--rust);border-color:var(--rust);">1</div>
+        <div class="wc-title">Business owner</div>
+        <p class="wc-body">You run the company and you find the deals. No research team. PDS does the digging so you can focus on closing.</p>
+      </div>
+      <div class="who-card rv" style="transition-delay:.22s">
+        <div class="wc-ico" style="color:var(--gold);border-color:var(--gold);">2</div>
+        <div class="wc-title">Territory sales rep</div>
+        <p class="wc-body">You own a market. You can't track permits and still make your calls. PDS watches the territory. You work the leads.</p>
+      </div>
+      <div class="who-card rv" style="transition-delay:.3s">
+        <div class="wc-ico" style="color:var(--sage);border-color:var(--sage);">3</div>
+        <div class="wc-title">New to the territory</div>
+        <p class="wc-body">No playbook. No history. PDS shows you which accounts just started moving.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule-thin-accent"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 7: MARKETS
+═══════════════════════════════════ -->
+<section class="markets" id="markets">
+  <div class="wrap">
+    <span class="eyebrow eyebrow-gold rv">Where We Operate</span>
+    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;transition-delay:.08s">Two markets live. Yours could be next.</h2>
+    <div class="markets-grid">
+      <div class="market-card rv" style="transition-delay:.14s">
+        <span class="mc-status mc-anchor">Anchor Market</span>
+        <h3 class="mc-city serif">Amarillo, TX</h3>
+        <div class="mc-label">Home territory. Most complete coverage.</div>
+        <p class="mc-body">71 sources &mdash; county permits, EDC board minutes, pipeline permits, environmental filings, energy interconnection data. Every major public record in the Panhandle.</p>
+        <div class="mc-stat">Construction &middot; Oilfield &middot; HVAC &middot; Healthcare &middot; CRE &middot; Legal</div>
+        <div class="mc-stat" style="margin-top:6px;color:var(--sage);">LIVE &middot; FULL COVERAGE</div>
+      </div>
+      <div class="market-card rv" style="transition-delay:.22s">
+        <span class="mc-status mc-live">Expansion Market</span>
+        <h3 class="mc-city serif">Atlanta, GA</h3>
+        <div class="mc-label">Second market. Built to expand.</div>
+        <p class="mc-body">36 sources &mdash; hospital filings, Georgia Power interconnection, transit procurement, development authority records, public school capital bonds.</p>
+        <div class="mc-stat">Healthcare &middot; Government &middot; Transit &middot; CRE &middot; Professional Services</div>
+        <div class="mc-stat" style="margin-top:6px;color:var(--sage);">LIVE &middot; GROWING</div>
+      </div>
+    </div>
+    <div class="markets-cta rv" style="transition-delay:.3s">
+      <p>Don't see your city? Founding Partners get coverage built for their territory before anyone else.</p>
+      <a href="#contact" class="btn btn-rust">See My First Report</a>
+    </div>
+  </div>
+</section>
+
+<div class="rule-thin-accent"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 8: ABOUT / FOUNDER
+═══════════════════════════════════ -->
 <section class="about" id="about">
   <div class="wrap">
     <span class="eyebrow eyebrow-dim rv">About</span>
     <div class="about-grid">
       <div class="about-body rv" style="transition-delay:.1s">
-        <p class="ab-p">Palo Duro Signals was built on a straightforward observation: the public record in the Texas Panhandle is rich, distributed, and almost entirely unwatched. Franchise tax filings, county permits, council minutes, ESBD bids, deed transfers, TCEQ applications. Each one is a data point. Together they tell you what is happening in your market before your competitors know to look.</p>
-        <p class="ab-p">The methodology comes from a decade in operations and logistics, where pattern recognition across fragmented data sources was the job, and five years selling enterprise software to Fortune 500 organizations, where the difference between a good account executive and a great one was knowing what was happening inside a customer's business before they said it out loud.</p>
-        <p class="ab-p">We apply that same discipline to the Panhandle every week. 40 plus sources. Signals connected across databases. Intelligence that is specific, sourced, and actionable. Not noise.</p>
+        <p class="ab-p">We built PDS for people who sell into territories and need to know what is moving before the market catches on.</p>
+        <p class="ab-p">Public records already show who is about to build, hire, expand, or spend. The signals are scattered across hundreds of government sites and filings. PDS turns that scattered data into one weekly report you can act on.</p>
         <div class="ab-sig">
           <div class="ab-name serif">Charlie Timberlake</div>
-          <div class="ab-title">Founder, Palo Duro Signals · Amarillo, TX</div>
+          <div class="ab-title">Founder, Palo Duro Signals &middot; Amarillo, TX</div>
           <a href="https://www.linkedin.com/in/charlie-timberlake/" class="ab-link mono" target="_blank" rel="noopener">linkedin.com/in/charlie-timberlake</a>
         </div>
       </div>
       <div class="rv" style="transition-delay:.2s">
         <div class="astat">
-          <div class="astat-n serif">40+</div>
-          <div class="astat-label">Data sources monitored weekly</div>
-          <div class="astat-body">County permits, ESBD bids, Secretary of State filings, TCEQ, TABC, TWC, city council minutes, SAM.gov, deed records, Google Business, and more.</div>
+          <div class="astat-n serif">106+</div>
+          <div class="astat-label">Public sources monitored</div>
+          <div class="astat-body">Permits, filings, board minutes, procurement portals, grant awards, court records. Scanned daily.</div>
         </div>
         <div class="astat">
-          <div class="astat-n serif gold">9</div>
-          <div class="astat-label">Industry verticals covered</div>
-          <div class="astat-body">Construction, oilfield, staffing, commercial real estate, professional services, financial services, ag supply, manufacturing, and IT. Each packet is filtered for your specific vertical.</div>
+          <div class="astat-n serif gold">2</div>
+          <div class="astat-label">Live markets</div>
+          <div class="astat-body">Amarillo, TX and Atlanta, GA. More markets coming through Founding Partners.</div>
         </div>
         <div class="astat">
-          <div class="astat-n serif sage">48 hrs</div>
-          <div class="astat-label">Signal to delivery window</div>
-          <div class="astat-body">Most signals are identified and verified within 48 hours of the underlying public record posting. Delivered the following Monday.</div>
+          <div class="astat-n serif sage">6–18 mo</div>
+          <div class="astat-label">Ahead of market</div>
+          <div class="astat-body">Our strongest signals surface spending months before an RFP or public announcement.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<div class="rule-accent"></div>
+
+<!-- ═══════════════════════════════════
+     SECTION 9: PRICING (after proof)
+═══════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <span class="eyebrow rv" style="display:block;text-align:center;">Pricing</span>
+    <h2 class="serif rv" style="font-size:clamp(26px,4vw,42px);font-weight:400;line-height:1.2;text-align:center;transition-delay:.08s">Your first report is free.</h2>
+    <p class="rv" style="font-size:15px;color:var(--muted);max-width:520px;margin:14px auto 0;text-align:center;line-height:1.75;transition-delay:.14s">Tell us your market and industry. We build your first report at no cost. If it's useful, continue. If not, walk away.</p>
+
+    <div class="pricing-cards">
+      <div class="price-card rv" style="transition-delay:.2s">
+        <div class="pc-label">Monthly</div>
+        <div class="pc-price serif">$500<span>/mo</span></div>
+        <div class="pc-period">Cancel anytime. No contracts.</div>
+        <ul class="pc-features">
+          <li>Weekly report every Monday</li>
+          <li>106+ sources scanned for your market</li>
+          <li>Signals months ahead of market</li>
+          <li>Names, dollar amounts, and deadlines</li>
+          <li>Ranked by confidence level</li>
+          <li>Delivered before 8am</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" style="width:100%;padding:13px;">See a Sample for My Market</a>
+      </div>
+      <div class="price-card featured rv" style="transition-delay:.28s">
+        <div class="pc-label">Annual</div>
+        <div class="pc-price serif">$5,000<span>/yr</span></div>
+        <div class="pc-period">Billed annually. Save $1,000.</div>
+        <span class="pc-save">Best value</span>
+        <ul class="pc-features">
+          <li>Everything in monthly</li>
+          <li>Locked rate &mdash; price never goes up</li>
+          <li>Priority when expanding to new markets</li>
+          <li>Annual billing &mdash; easier to expense</li>
+        </ul>
+        <a href="#contact" class="btn btn-rust" style="width:100%;padding:13px;">See My First Report</a>
+        <p class="pc-note">1 useful signal can justify the subscription.</p>
+      </div>
+      <div class="price-card custom rv" style="transition-delay:.36s">
+        <div class="pc-label">Custom</div>
+        <div class="pc-custom-price serif">Let's Talk</div>
+        <div class="pc-custom-sub">Multiple markets, teams, or special needs.</div>
+        <ul class="pc-features">
+          <li>Everything in annual</li>
+          <li>Cover multiple cities or regions</li>
+          <li>Reports for your whole sales team</li>
+          <li>Custom source requests</li>
+          <li>Dedicated onboarding</li>
+          <li>Flexible delivery schedule</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost" style="width:100%;padding:13px;">Contact Us</a>
+        <p class="pc-note">Built around your territory and team.</p>
+      </div>
+    </div>
+
+    <div class="founding-card rv" style="transition-delay:.36s">
+      <div class="fc-hed serif">Founding Partner</div>
+      <p class="fc-body">Founding Partners lock in lifetime pricing and help shape coverage in their market.</p>
+      <a href="#contact" class="btn btn-rust" style="padding:11px 24px;margin-bottom:14px;">Claim a Founding Partner Spot</a>
+      <div class="fc-spots">Limited spots remaining</div>
+    </div>
+  </div>
+</section>
+
 <div class="rule-thin-accent"></div>
 
-<!-- CTA -->
+<!-- ═══════════════════════════════════
+     SECTION 10: CTA
+═══════════════════════════════════ -->
 <section class="cta-sec" id="contact">
   <div class="wrap">
     <div class="cta-inner">
       <span class="eyebrow rv" style="display:block;text-align:center;">Get Started</span>
-      <h2 class="cta-hed serif rv" style="transition-delay:.08s">Request a sample packet.<br>No commitment required.</h2>
-      <p class="cta-sub rv" style="transition-delay:.14s">Fill out the short form below. We build a sample packet for your industry and territory and send it within 48 hours. If it is useful, we talk next steps. If it is not, you owe nothing.</p>
-      <form class="cta-form rv" style="transition-delay:.22s" name="snapshot" method="POST" data-netlify="true">
+      <h2 class="cta-hed serif rv" style="transition-delay:.08s">See your first report free.</h2>
+      <p class="cta-sub rv" style="transition-delay:.14s">Tell us your market, your industry, and where to send it. We will build your first report and send it free. No card required. No automated follow-up.</p>
+      <form class='cta-form rv' method='POST' name='snapshot' id='pds-form' style='transition-delay:.22s' data-netlify="true">
         <input type="hidden" name="form-name" value="snapshot">
         <div class="cf-row">
           <div class="cf-f"><input type="text" name="name" placeholder="Your name" required></div>
           <div class="cf-f"><input type="text" name="company" placeholder="Company (optional)"></div>
         </div>
-        <div class="cf-f">
-          <select name="industry" required>
-            <option value="" disabled selected>Your industry</option>
-            <option>Construction and Trades</option>
-            <option>Oilfield Services</option>
-            <option>Staffing and Recruiting</option>
-            <option>Professional Services</option>
-            <option>Commercial Real Estate</option>
-            <option>Financial Services</option>
-            <option>Ag Equipment and Supply</option>
-            <option>Manufacturing</option>
-            <option>IT and Managed Services</option>
-            <option>Other</option>
-          </select>
+        <div class="cf-row">
+          <div class="cf-f"><input type="text" name="city" placeholder="Your city / market"></div>
+          <div class="cf-f">
+            <select name="industry" required>
+              <option value="" disabled selected>Your industry</option>
+              <option>Construction and Trades</option>
+              <option>Healthcare</option>
+              <option>Legal Services</option>
+              <option>Oilfield and Energy</option>
+              <option>Commercial Real Estate</option>
+              <option>Professional Services</option>
+              <option>Financial Services</option>
+              <option>Staffing and Recruiting</option>
+              <option>Manufacturing</option>
+              <option>Logistics and Transportation</option>
+              <option>Ag Equipment and Supply</option>
+              <option>IT and Managed Services</option>
+              <option>Other</option>
+            </select>
+          </div>
         </div>
         <div class="cf-f"><input type="email" name="email" placeholder="Email address" required></div>
-        <div class="cf-f"><textarea name="message" rows="3" placeholder="Optional: competitors, territory, or anything specific you want us to watch for"></textarea></div>
-        <button type="submit" class="btn btn-rust" style="width:100%;padding:15px;font-size:15px;">Request a sample packet</button>
-        <p class="cf-micro">Response within 24 hours · No automated follow ups · Your email delivers the packet and nothing else</p>
+        <button type="submit" class="btn btn-rust" style="width:100%;padding:15px;font-size:15px;">See My First Report</button>
+        <p class="cf-micro">Response within 24 hours &middot; First report free &middot; No credit card &middot; No automated follow-ups</p>
       </form>
+      <div class="cf-success" id="pds-success" style="display:none;">
+        <div class="cf-success-ico">&#10003;</div>
+        <div class="cf-success-hed serif">We got it.</div>
+        <p class="cf-success-body">Your first report is being built. We will review your market, pull the signals, and send your report within 24 hours.</p>
+        <p class="cf-success-note">No automated follow-ups. Just your report.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -662,51 +792,27 @@ a{color:inherit;text-decoration:none;}
     <div class="foot-grid">
       <div>
         <div class="foot-brand serif">Palo Duro Signals</div>
-        <div class="foot-loc">Amarillo, Texas · Texas Panhandle Region</div>
+        <div class="foot-tag">Pre-spend intelligence. Not a dashboard.</div>
+        <div class="foot-loc">Amarillo, Texas &middot; Operating in Amarillo + Atlanta</div>
+        <a href="mailto:charlie@palodurosignals.ai" class="foot-lnk" style="display:inline-block;margin-top:8px;">charlie@palodurosignals.ai</a>
       </div>
       <div class="foot-links">
-        <a href="#packet" class="foot-lnk">What You Get</a>
-        <a href="#feed" class="foot-lnk">Signal Feed</a>
+        <a href="#signal" class="foot-lnk">Sample Report</a>
         <a href="#how" class="foot-lnk">How It Works</a>
+        <a href="#markets" class="foot-lnk">Markets</a>
+        <a href="#pricing" class="foot-lnk">Pricing</a>
         <a href="#about" class="foot-lnk">About</a>
-        <a href="#contact" class="foot-lnk">Contact</a>
       </div>
       <div>
-        <p class="foot-legal">All data sourced from publicly available government records. No private data collected or distributed. Signals are for informational purposes only. Palo Duro Signals does not guarantee accuracy of third party public records or outcomes resulting from their use.</p>
+        <p class="foot-legal">All data sourced from publicly available government records. No private data collected or distributed. Signals are for informational purposes only.</p>
       </div>
     </div>
-    <div class="foot-copy">© 2026 PALO DURO SIGNALS · BUILT LOCALLY · AMARILLO, TEXAS</div>
+    <div class="foot-copy">&copy; 2026 PALO DURO SIGNALS &middot; PALODUROSIGNALS.AI &middot; AMARILLO, TEXAS</div>
   </div>
 </footer>
 
 <script>
-// ── TICKER (fixed pixel speed) ──
-(function(){
-  const track = document.querySelector('.t-track');
-  if(!track) return;
-  // Clone items to fill — repeat until track is at least 3x viewport wide
-  const fill = () => {
-    while(track.scrollWidth < window.innerWidth * 3) {
-      document.querySelectorAll('.t-item').forEach(item => {
-        track.appendChild(item.cloneNode(true));
-      });
-    }
-  };
-  fill();
-  const half = track.scrollWidth / 2;
-  let x = 0;
-  const PX_PER_SEC = 55; // pixels per second — feels calm and readable
-  let last = null;
-  const step = ts => {
-    if(last !== null) x += PX_PER_SEC * (ts - last) / 1000;
-    if(x >= half) x -= half;
-    track.style.transform = `translateX(-${x}px)`;
-    last = ts;
-    requestAnimationFrame(step);
-  };
-  requestAnimationFrame(step);
-  track.addEventListener('mouseenter', () => last = null);
-})();
+// ── PARTICLE CANVAS ──
 (function(){
   const c=document.getElementById('heroC');
   if(!c)return;
@@ -755,20 +861,28 @@ a{color:inherit;text-decoration:none;}
 const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');ro.unobserve(e.target);}});},{threshold:.07,rootMargin:'0px 0px -24px 0px'});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 
-// ── SIGNAL FILTERS ──
+// ── FORM SUBMIT ──
 (function(){
-  let aC='all',aB='all';
-  function run(){
-    let vis=0;
-    document.querySelectorAll('#sigGrid .sig-card').forEach(card=>{
-      const catOk=aC==='all'||card.dataset.cat===aC;
-      const buyOk=aB==='all'||(card.dataset.buyer||'').includes(aB);
-      if(catOk&&buyOk){card.classList.remove('hide');vis++;}else card.classList.add('hide');
+  const form=document.getElementById('pds-form');
+  const success=document.getElementById('pds-success');
+  if(!form||!success)return;
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const data=new FormData(form);
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(data).toString()})
+    .then(function(res){
+      if(res.ok){
+        form.style.display='none';
+        success.style.display='block';
+        success.classList.add('rv','on');
+      } else {
+        alert('Something went wrong. Please email info@palodurosignals.ai directly.');
+      }
+    })
+    .catch(function(){
+      alert('Something went wrong. Please email info@palodurosignals.ai directly.');
     });
-    document.getElementById('feedEmpty').style.display=vis===0?'block':'none';
-  }
-  document.querySelectorAll('#catF .fb').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('#catF .fb').forEach(x=>x.classList.remove('on'));b.classList.add('on');aC=b.dataset.cat;run();});});
-  document.querySelectorAll('#buyerF .fb').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('#buyerF .fb').forEach(x=>x.classList.remove('on'));b.classList.add('on');aB=b.dataset.buyer;run();});});
+  });
 })();
 </script>
 </body>
