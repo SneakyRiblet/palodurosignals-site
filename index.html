@@ -308,35 +308,11 @@ a{color:inherit;text-decoration:none}
       <h2>Real signals from a recent report.</h2>
       <p>Named projects. Dollar amounts. Specific actions. Not generic market commentary.</p>
     </div>
-    <div class="signal-cards">
-      <div class="sig-card rv">
-        <div class="sig-card-head">
-          <div class="sig-badge b-early">Early Warning</div>
-          <div class="sig-card-title">Potter County &mdash; Three paving procurements in 28 days</div>
-          <div class="sig-card-src">Source: Potter County Commissioners Court</div>
-        </div>
-        <div class="sig-card-body">
-          <p>RFB #1280-26 for asphalt opened March 9. Follows RFB #1279-26 (road materials, awarded Feb 23) and a $111,811 contract awarded in February. Three cycles this fast signals a spring road maintenance pipeline.</p>
-          <div class="sig-action">
-            <div class="sig-action-label">Monday Action</div>
-            <p>Call Potter County Purchasing at (806) 379-2275. Confirm next solicitation timeline and get on the bid notification list.</p>
-          </div>
-        </div>
-      </div>
-      <div class="sig-card rv" style="transition-delay:.12s">
-        <div class="sig-card-head">
-          <div class="sig-badge b-pre">Pre-Signal &mdash; 6-18 Month Lead</div>
-          <div class="sig-card-title">TCEQ stormwater permit filed &mdash; construction not yet public</div>
-          <div class="sig-card-src">Source: TCEQ Central Registry</div>
-        </div>
-        <div class="sig-card-body">
-          <p>Environmental clearance is required before construction begins. This permit means a project is in planning that hasn't appeared on any bid list, plan room, or trade newsletter. The permit names the operator and site.</p>
-          <div class="sig-action">
-            <div class="sig-action-label">Monday Action</div>
-            <p>Contact the permit holder directly. They're planning construction and haven't selected contractors yet. You have no competition.</p>
-          </div>
-        </div>
-      </div>
+    <div class="signal-cards" id="signalCards">
+      <!-- Loaded dynamically from signals.json -->
+    </div>
+    <div style="text-align:center;margin-top:20px">
+      <span class="hp-item" id="signalIndustry" style="font-size:11px"></span>
     </div>
   </div>
 </section>
@@ -515,6 +491,47 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script>
+// Dynamic signal showcase — loads from signals.json, picks 2 random on each visit
+(function(){
+  fetch('signals.json').then(r=>r.json()).then(signals=>{
+    if(!signals.length)return;
+    // Shuffle and pick 2 from different industries when possible
+    const shuffled=signals.sort(()=>Math.random()-.5);
+    const first=shuffled[0];
+    let second=shuffled.find(s=>s.industry!==first.industry)||shuffled[1];
+    const picks=[first,second];
+    const container=document.getElementById('signalCards');
+    const industries=new Set();
+    picks.forEach((s,i)=>{
+      industries.add(s.industry);
+      const card=document.createElement('div');
+      card.className='sig-card rv';
+      if(i===1)card.style.transitionDelay='.12s';
+      card.innerHTML=`
+        <div class="sig-card-head">
+          <div class="sig-badge ${s.badge_class}">${s.badge}</div>
+          <div class="sig-card-title">${s.title}</div>
+          <div class="sig-card-src">Source: ${s.source}</div>
+        </div>
+        <div class="sig-card-body">
+          <p>${s.body}</p>
+          <div class="sig-action">
+            <div class="sig-action-label">Monday Action</div>
+            <p>${s.action}</p>
+          </div>
+        </div>`;
+      container.appendChild(card);
+      // Trigger reveal animation
+      setTimeout(()=>card.classList.add('on'),100+i*150);
+    });
+    const label=document.getElementById('signalIndustry');
+    label.innerHTML='<span class="hp-dot" style="background:var(--gold)"></span> Showing signals for: '+Array.from(industries).join(' & ')+' — refreshes each visit';
+  }).catch(()=>{
+    // Fallback: show a static message if fetch fails
+    document.getElementById('signalCards').innerHTML='<p style="text-align:center;color:var(--dim);padding:40px">Signal examples loading...</p>';
+  });
+})();
+
 const obs=new IntersectionObserver(e=>{e.forEach(n=>{if(n.isIntersecting)n.target.classList.add('on')})},{threshold:.1});
 document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
 document.getElementById('intakeForm').addEventListener('submit',function(e){
